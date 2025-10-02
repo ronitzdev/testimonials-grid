@@ -177,7 +177,7 @@ color: var(--color-White);
 }
 
 /* Media query para pantallas más pequeñas (ej: mobile) */
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
     .grid-container {
         grid-template-columns: 1fr; /* Una sola columna */
         grid-template-rows: auto; /* Filas automáticas */
