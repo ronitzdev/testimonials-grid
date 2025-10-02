@@ -47,7 +47,11 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 1.3rem
+    font-size: 1.3rem;
+}
+main {
+    padding: 10px 20px;
+    margin: 20px;
 }
 .grid-container {
     height: 100vh;
@@ -63,7 +67,6 @@ body {
     box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
     color: #FFFFFF;
     padding: 3.2rem;
-    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -171,4 +174,31 @@ color: var(--color-White);
 }
 .subcomment--black{
     color: #48556A;
+}
+
+/* Media query para pantallas más pequeñas (ej: mobile) */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto; /* Filas automáticas */
+        height: auto; /* Ajusta la altura automáticamente */
+    
+    }
+
+    /* Las tarjetas ocupan todo el ancho en mobile */
+    .card {
+        grid-column: 1;
+    }
+
+    .card-1, .card-2, .card-3, .card-4, .card-5 {
+        grid-column: 1; /* Asegura que todas las cards ocupen la columna 1 */
+        grid-row: auto; /* Permite que las filas se ajusten automáticamente */
+    }
+
+    .card-1::before {
+        top: 10px;
+        right: 20px;
+        width: 10rem;
+        height: 8rem;
+    }
 }
